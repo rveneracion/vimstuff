@@ -1,0 +1,23 @@
+"autocmd function for C++ files
+function Cpp()
+    setl makeprg=c\+\+\ %\ -o\ %:t:r
+    cd $HOME\devo\c++
+endfunction
+
+"autocmd function for Python files
+function Python()
+    setl makeprg=python\ %
+    cd $HOME\devo\python
+endfunction
+
+"function for opening my vimrc
+    function OpenVimRC()
+        let vimrc= "c:\\Users\\Richard\\_vimrc"
+        if (@% == vimrc)
+            bd
+        else
+            execute 'vspl' vimrc
+        endif
+    endfunction
+
+
