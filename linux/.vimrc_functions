@@ -1,0 +1,30 @@
+"autocmd for C filetypes
+    function C()
+        "setl makeprg=gcc\ %\ -o\ %:t:r
+        "cd ~/devo/c
+    endfunction
+
+"autocmd for Python filetypes
+    function Python()
+        setl makeprg=python\ %
+        "cd ~/devo/python
+    endfunction
+
+"autocmd for C++ filetypes
+    function Cpp()
+        "setl makeprg=c\+\+\ %\ -o\ %:t:r
+        "cd ~/devo/c++
+    endfunction
+
+"function for opening my vimrc
+    function OpenVimRC()
+        let vimrc= "/home/richard/.vimrc"
+        if (@% == vimrc)
+            bd
+        else
+            execute 'vspl' vimrc
+        endif
+    endfunction
+
+
+
