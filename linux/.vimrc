@@ -10,7 +10,7 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -18,12 +18,14 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'msanders/snipmate.vim'
+Plugin 'SirVer/ultisnips'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/nerdtree'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'jnurmine/Zenburn'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'kien/ctrlp.vim'
+Plugin 'jonathanfilip/vim-lucius'
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -57,6 +59,8 @@ set cursorline
 set noswapfile
 set hidden
 set laststatus=2
+set ignorecase
+set smartcase
 set ts=4 sts=4 sw=4 expandtab
 syntax on
 
