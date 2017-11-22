@@ -1,7 +1,25 @@
+"autocmd for Java filetypes
+    function Java()
+        setlocal makeprg=javac\ %
+        setlocal errorformat=%f:%l:%m
+    endfunction
+
 "autocmd for C filetypes
     function C()
         "setl makeprg=gcc\ %\ -o\ %:t:r
         "cd ~/devo/c
+    endfunction
+
+"autocmd for Javascript filetypes
+    function Javascript()
+        setl makeprg=node\ %
+        "cd ~/devo/js
+    endfunction
+
+"autocmd for Ruby filetypes
+    function Ruby()
+        setl makeprg=ruby\ %
+        "cd ~/devo/ruby
     endfunction
 
 "autocmd for Python filetypes

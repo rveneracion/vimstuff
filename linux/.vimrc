@@ -1,4 +1,3 @@
-"execute pathogen#infect()
 "***********VUNDLE STUFF************
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -17,8 +16,12 @@ Plugin 'VundleVim/Vundle.vim'
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-sensible'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-unimpaired'
 Plugin 'msanders/snipmate.vim'
-Plugin 'SirVer/ultisnips'
+"Plugin 'SirVer/ultisnips'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/nerdtree'
 Plugin 'davidhalter/jedi-vim'
@@ -26,6 +29,8 @@ Plugin 'jnurmine/Zenburn'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'kien/ctrlp.vim'
 Plugin 'jonathanfilip/vim-lucius'
+Plugin 'vim-airline/vim-airline'
+Plugin 'NLKNguyen/papercolor-theme'
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -54,15 +59,17 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 "**********END VUNDLE**************
 source ~/.vimrc_functions
-set number
-set cursorline
-set noswapfile
-set hidden
-set laststatus=2
-set ignorecase
-set smartcase
-set ts=4 sts=4 sw=4 expandtab
-syntax on
+
+set number                      "shows line numbers
+set relativenumber              "shows line number distance relative to cursor 
+set cursorline                  "shows which line is current
+set noswapfile                  "prevents annoying .swp files
+set hidden                      "allows multiple buffers
+set laststatus=2                "shows status bar
+set ignorecase                  "ignores case for searches
+set smartcase                   "pays attention to uppercase when used in searches
+set ts=4 sts=4 sw=4 expandtab   "tab settings
+syntax on                       "syntax highlighting
 
     "*******************
     "        
@@ -90,8 +97,8 @@ syntax on
     noremap <Left> <C-w>h
     noremap <Right> <C-w>l
 
-"maps Ctrl-F5 to :make for compiling code
-    map <C-F5> :make<cr>
+"maps Ctrl-M (control-shift-m) to :make for compiling code
+    map <C-M> :make<cr>
 
 "maps F12 to open vimrc
     map <F12> :execute OpenVimRC()<cr>
@@ -99,10 +106,22 @@ syntax on
 " colors and stuff
 set t_Co=256
       
-let solarized_termcolors=256
-colorscheme zenburn
+"let g:solarized_termcolors=256
+"colorscheme zenburn
+set background=light
+colorscheme solarized
+
+"automatically perform functions when
+"opening files with certain file extensions.
+"the functions are located in ~/.vimrc_functions
 autocmd filetype cpp execute Cpp()
 autocmd filetype python execute Python()
 autocmd filetype c execute C()
+autocmd filetype java execute Java()
+autocmd filetype js execute Javascript()
+autocmd filetype rb execute Ruby()
+autocmd filetype ejs setl filetype=html
+autocmd BufWritePre,BufRead *.ejs setl filetype=html
 
-
+" enable dot repeat for surround plugin
+silent! call repeat#set("\<Plug>surround", v:count)
