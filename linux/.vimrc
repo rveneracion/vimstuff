@@ -22,10 +22,6 @@ Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'msanders/snipmate.vim'
 "Plugin 'SirVer/ultisnips'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-repeat'
-Plugin 'vim-airline/vim-airline'
-Plugin 'msanders/snipmate.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/nerdtree'
 Plugin 'davidhalter/jedi-vim'
@@ -124,8 +120,6 @@ autocmd filetype c execute C()
 autocmd filetype java execute Java()
 autocmd filetype js execute Javascript()
 autocmd filetype rb execute Ruby()
-autocmd filetype ejs setl filetype=html
-autocmd BufWritePre,BufRead *.ejs setl filetype=html
 
 " enable dot repeat for surround plugin
 silent! call repeat#set("\<Plug>surround", v:count)
