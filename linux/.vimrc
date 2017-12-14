@@ -14,23 +14,42 @@ Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
+"""""""""""""""""""""""""""""""""""""""
+"  Tim Pope awesomeness
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-unimpaired'
+"""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""
+"  Snippets
 Plugin 'msanders/snipmate.vim'
+Plugin 'honza/vim-snippets'
 "Plugin 'SirVer/ultisnips'
-Plugin 'altercation/vim-colors-solarized'
+"""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""
+"  File access
 Plugin 'scrooloose/nerdtree'
-Plugin 'davidhalter/jedi-vim'
-Plugin 'jnurmine/Zenburn'
-Plugin 'Lokaltog/vim-easymotion'
 Plugin 'kien/ctrlp.vim'
-Plugin 'jonathanfilip/vim-lucius'
+"""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""
+"  Programming tools
+Plugin 'davidhalter/jedi-vim'
+Plugin 'Lokaltog/vim-easymotion'
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+"""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""
+"  color schemes
+Plugin 'jonathanfilip/vim-lucius'
+Plugin 'jnurmine/Zenburn'
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'AlessandroYorba/Alduin'
+Plugin 'nanotech/jellybeans.vim'
+"""""""""""""""""""""""""""""""""""""""
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -104,12 +123,12 @@ syntax on                       "syntax highlighting
     map <F12> :execute OpenVimRC()<cr>
 
 " colors and stuff
-set t_Co=256
+"set t_Co=256
       
-"let g:solarized_termcolors=256
 "colorscheme zenburn
-set background=light
-colorscheme solarized
+colorscheme jellybeans
+let g:airline_powerline_fonts=1
+let g:snippets_dir='/home/richard/.vim/bundle/vim-snippets/snippets'
 
 "automatically perform functions when
 "opening files with certain file extensions.
