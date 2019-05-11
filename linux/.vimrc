@@ -25,9 +25,9 @@ Plugin 'tpope/vim-unimpaired'
 """""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""
 "  Snippets
-Plugin 'msanders/snipmate.vim'
+"Plugin 'msanders/snipmate.vim'
 Plugin 'honza/vim-snippets'
-"Plugin 'SirVer/ultisnips'
+Plugin 'SirVer/ultisnips'
 """""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""
 "  File access
@@ -40,6 +40,7 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'Omnisharp/omnisharp-vim'
 """""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""
 "  color schemes
@@ -121,6 +122,11 @@ syntax on                       "syntax highlighting
 
 "maps F12 to open vimrc
     map <F12> :execute OpenVimRC()<cr>
+    
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " colors and stuff
 "set t_Co=256
