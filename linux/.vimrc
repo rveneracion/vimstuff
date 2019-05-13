@@ -132,7 +132,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 "set t_Co=256
       
 "colorscheme zenburn
-colorscheme jellybeans
+colorscheme lucius
 let g:airline_powerline_fonts=1
 let g:snippets_dir='/home/richard/.vim/bundle/vim-snippets/snippets'
 
