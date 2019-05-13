@@ -36,7 +36,7 @@
 
 "function for opening my vimrc
     function OpenVimRC()
-        let vimrc= "/home/richard/.vimrc"
+        let vimrc= "~/.vimrc"
         if (@% == vimrc)
             bd
         else
