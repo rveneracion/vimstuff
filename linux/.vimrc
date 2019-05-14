@@ -80,6 +80,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 "**********END VUNDLE**************
 source ~/.vimrc_functions
+source ~/.vimrc_omnisharp
 
 set number                      "shows line numbers
 set relativenumber              "shows line number distance relative to cursor 
