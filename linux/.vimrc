@@ -24,10 +24,11 @@ Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-unimpaired'
 """""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""
-"  Snippets
+"  Snippets and syntax
 "Plugin 'msanders/snipmate.vim'
 Plugin 'honza/vim-snippets'
 Plugin 'SirVer/ultisnips'
+Plugin 'w0rp/ale'
 """""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""
 "  File access
