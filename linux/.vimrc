@@ -109,9 +109,9 @@ syntax on                       "syntax highlighting
 "maps Ctrl-n to open/close the NERDTree file explorer (try it now!)
     map <C-n> :NERDTreeToggle<cr>
 
-"maps Ctrl-Leftarrow/Rightarrow to cycle through open buffers
-    noremap <C-Right> :bn<cr>
-    noremap <C-Left> :bp<cr>
+"maps H and R (shift-h, shift-r) to cycle through open buffers
+    noremap L :bn<cr>
+    noremap H :bp<cr>
 
 "maps the arrow keys to jump to different split windows
     noremap <Up> <C-w>k
