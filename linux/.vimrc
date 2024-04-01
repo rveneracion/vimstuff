@@ -27,7 +27,7 @@ Plugin 'tpope/vim-unimpaired'
 "  Snippets and syntax
 "Plugin 'msanders/snipmate.vim'
 Plugin 'honza/vim-snippets'
-"Plugin 'SirVer/ultisnips'
+Plugin 'SirVer/ultisnips'
 Plugin 'w0rp/ale'
 """""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""
@@ -98,13 +98,9 @@ syntax on                       "syntax highlighting
 	"CUSTOM KEY MAPPINGS
     "
 	"*******************
-"map Space and Shift-Space to jump forward and backward in the text
-    nnoremap <Space> <C-f>
-    nnoremap <S-Space> <C-b>
-    nnoremap <Backspace> <C-b>
-    vnoremap <Space> <C-f>
-    vnoremap <S-Space> <C-b>
-    vnoremap <Backspace> <C-b>
+
+"map kj to <esc> in INSERT mode
+    inoremap kj <esc>
 
 "maps Ctrl-n to open/close the NERDTree file explorer (try it now!)
     map <C-n> :NERDTreeToggle<cr>
@@ -129,6 +125,7 @@ syntax on                       "syntax highlighting
 "let g:UltiSnipsExpandTrigger="<tab>"
 "let g:UltiSnipsJumpForwardTrigger="<c-b>"
 "let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsJumpOrExpandTrigger = "<tab>"
 
 " colors and stuff
 "set t_Co=256
