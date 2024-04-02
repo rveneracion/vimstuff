@@ -115,6 +115,12 @@ syntax on                       "syntax highlighting
     noremap <Left> <C-w>h
     noremap <Right> <C-w>l
 
+"maps g + arrow keys to resize split windows
+    noremap g<Up> <C-w>+ 
+    noremap g<Down> <C-w>-
+    noremap g<Left> <C-w><
+    noremap g<Right> <C-w>>
+
 "maps Ctrl-M (control-shift-m) to :make for compiling code
     map <C-M> :make<cr>
 
